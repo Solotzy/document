@@ -1,0 +1,116 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.14)  15 SEP 2015 12:32
+entering extended mode
+**F:/360云盘/1号店的电脑/工作/指标监控体系/资料整合/用户�
+�迹工程/数据预处理流程.tex
+
+(F:/360云盘/1号店的电脑/工作/指标监控体系/资料整合/用户轨
+迹工程/数据预处理流程.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+(D:\CTEX\CTeX\tex\latex\cct\cctart.cls
+Document Class: cctart 2004/10/14 Derived from the `article' class
+(D:\CTEX\MiKTeX\tex\latex\base\article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(D:\CTEX\MiKTeX\tex\latex\base\size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(D:\CTEX\CTeX\tex\latex\cct\cctbase.sty
+Package: cctbase 2006/05/17
+ (D:\CTEX\CTeX\tex\latex\cct\CCT.sty
+0.61803 [2009/11/20] (D:\CTEX\CTeX\tex\latex\cct\cchead.sty
+\!ZihaoNo=\count87
+\ccwd=\dimen103
+\ccht=\dimen104
+\ccdp=\dimen105
+\!ccbox=\box26
+\!ccbdskip=\skip43
+)
+Package: CCT 2009/11/20 0.61803
+\@CCTcnta=\count88
+\@CCTcntb=\count89
+\@CCTlastkern=\count90
+\@CCTglue=\skip44
+\@CCTtoks=\toks14
+
+(D:\CTEX\CTeX\tex\latex\cct\CCT.cfg) (D:\CTEX\CTeX\tex\latex\cct\GBKkern.cfg)
+(D:\CTEX\CTeX\tex\latex\CJK\GB\c19song.fd) (\ziti{A}->gbksong)
+\@CCTskip=\skip45
+)))
+(F:\360云盘\1号店的电脑\工作\指标监控体系\资料整合\用户轨
+迹工程\数据预处理流程.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+ (D:\CTEX\CTeX\tex\latex\CJK\GB\c19hei.fd)
+(\ziti{B}->gbkhei)
+Warning: font `bs' not found, trying alternative font `hei'
+(\ziti{E}->gbkhei)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <17.28> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 5.
+ Loading punctuation table gbkhei.tbl
+(F:\360云盘\1号店的电脑\工作\指标监控体系\资料整合\用户轨
+迹工程\数据预处理流程.toc
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...}{\numberline {1.1}The Ant and the Dove}{2}
+                                                  
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.2 ...}{\numberline {1.1}The Ant and the Dove}{2}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+ 
+Here is how much of TeX's memory you used:
+ 819 strings out of 494045
+ 10401 string characters out of 3153701
+ 63066 words of memory out of 3000000
+ 4147 multiletter control sequences out of 15000+200000
+ 11826 words of font info for 42 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 29i,6n,26p,298b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
