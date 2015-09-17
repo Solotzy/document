@@ -12,4 +12,4 @@
 ![tracker_001][tracker_001] 
 
 
-[tracker_001]: img/tracker_001.png
+[tracker_001]: http://oyyw-bucket.oss-cn-shenzhen.aliyuncs.com/document%2FMarkdown%2F%E7%AE%80%E6%98%8ETracker%E4%BD%93%E7%B3%BB%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3%2Ftracker_001.png
