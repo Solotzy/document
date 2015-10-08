@@ -77,7 +77,7 @@ Tracker码的埋码记录了如下重要字段：
 
 
 
-[简明Tracker体系说明文档]: https://github.com/ouyangyewei/document/blob/master/YiHaoDian/%E7%AE%80%E6%98%8ETracker%E4%BD%93%E7%B3%BB%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3.md
+[简明Tracker体系说明文档]: https://github.com/ouyangyewei/document/tree/master/YiHaoDian/simple_tracker_introduction
 [Tracker手册]: http://wiki.yihaodian.cn/mediawiki/index.php/Tracker%E9%A1%B9%E7%9B%AE
 [Tracker记录字段]: http://wiki.yihaodian.cn/mediawiki/index.php/Tracker%E8%AE%B0%E5%BD%95%E5%AD%97%E6%AE%B5%E7%9A%84%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3
 [用户轨迹工程-预处理数据]: https://github.com/ouyangyewei/document/blob/master/YiHaoDian/user_trace_introduction/ref/%5B%E7%94%A8%E6%88%B7%E8%BD%A8%E8%BF%B9%E5%B7%A5%E7%A8%8B%5D%E9%A2%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE.xls?raw=true
