@@ -15,7 +15,6 @@
       * [关于Tracker](#关于Tracker)
       * [预处理环节概要](#预处理环节概要)
     * [建立各用户的轨迹路径](#建立各用户的轨迹路径)
-      * [预处理流程](#预处理流程)
       * [建立轨迹](#建立轨迹)
         * [基于Tracker码方式](#基于Tracker码方式)
         * [基于自动打点方式](#基于自动打点方式)
@@ -66,8 +65,13 @@
 预处理过程中各表的表结构请参见[用户轨迹工程-预处理数据][]  
 
 ## 建立各用户的轨迹图
-### 预处理流程
-hello world
+整个过程借助MapReduce来完成的，逻辑如下：
+
++ **Map**端的输入来自`extract_preprocess表`，逐行处理，**Map**端提取`session_id`作为key分发，输出结果为`<session_id, 原纪录>`
++ **Reduce**端的输入来自**Map**端的输出，因此在**Reduce**的过程，是对每个`session_id`进行处理的，亦即是将对每个`session_id`都建立一颗轨迹树：
+  - 将Tracker按`tracker_time`进行升序排列
+  - 建立轨迹树（伪造一个虚拟的树根，日期为`1970-01-01 00:00:00`，此后所有tracker节点都挂接在其下），建立轨迹的过程参见下面章节
+
 ### 建立轨迹
 #### 基于Tracker码方式
 Tracker码的埋码中记录了如下重要字段：
@@ -111,6 +115,7 @@ Tracker码的埋码中记录了如下重要字段：
 
 # 基于用户轨迹的KPI统计
 ## 预处理环节
+
 ### 关联购买节点
 
 ### 推荐路径补全
@@ -161,6 +166,8 @@ Tracker码的埋码中记录了如下重要字段：
 | order_user_counts | 下单人数 = 去重的父订单end\_user\_id数 |
 | order_counts | 订单数 = 去重的父订单数 |
 | order_amount | 订单金额 = 订单的order\_amount求和 |
+
+
 
 
 [简明Tracker体系说明文档]: https://github.com/ouyangyewei/document/tree/master/YiHaoDian/simple_tracker_introduction
