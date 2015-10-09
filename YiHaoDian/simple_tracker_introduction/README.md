@@ -60,13 +60,13 @@ Backend报表中筛选框的连动效果，由此2表数据决定。
 + 自动打点方式并不记录***当前页面url***和***上一个页面的url***；
 
 # 相关联系人
-**4.1 自动打点相关负责人：**
+**自动打点相关负责人：**
 
 + **PC、H5**: 吕海振、张飞
 + **Android**: 周剑华（PD）、黄俊（开发）
 + **IOS**: 周剑华（PD）、江傲（开发）
 
-**4.2 埋码相关负责人：**
+**埋码相关负责人：**
 张飞、吕海振
 
 [tracker_001]: https://github.com/ouyangyewei/document/blob/master/YiHaoDian/simple_tracker_introduction/ref/tracker_001.png
