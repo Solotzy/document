@@ -1,8 +1,8 @@
 # **用户轨迹系统说明文档**
 **作者：欧阳业伟**  
-**修订日期：2015年10月8日**  
+**修订日期：2015年10月9日**  
 
-Table Of Content
+目录
 ================
 
   * [用户轨迹系统介绍](#用户轨迹系统介绍)
@@ -15,8 +15,10 @@ Table Of Content
       * [关于Tracker](#关于Tracker)
       * [预处理环节概要](#预处理环节概要)
     * [建立各用户的轨迹路径](#建立各用户的轨迹路径)
-      * [基于Tracker码方式](#基于Tracker码方式)
-      * [基于自动打点方式](#基于自动打点方式)
+      * [预处理流程](#预处理流程)
+      * [建立轨迹](#建立轨迹)
+        * [基于Tracker码方式](#基于Tracker码方式)
+        * [基于自动打点方式](#基于自动打点方式)
   * [推荐有效路径的提取](#推荐有效路径的提取)
     * [直接推荐路径](#直接推荐路径)
     * [引导型推荐路径](#引导型推荐路径)
@@ -26,7 +28,7 @@ Table Of Content
       * [关联购买节点](#关联购买节点)
       * [推荐路径补全](#推荐路径补全)
     * [统计指标](#统计指标)
-      * [PC-H5端](#PC-H5端)
+      * [PC、H5端](#PC、H5端)
       * [APP端](#APP端)
 
 # 用户轨迹系统介绍
@@ -64,7 +66,9 @@ Table Of Content
 预处理过程中各表的表结构请参见[用户轨迹工程-预处理数据][]  
 
 ## 建立各用户的轨迹图
-### 基于Tracker码方式
+### 预处理流程
+### 建立轨迹
+#### 基于Tracker码方式
 Tracker码的埋码中记录了如下重要字段：
 > 
 > ***url***：记录当前页面的url  
@@ -83,7 +87,7 @@ Tracker码的埋码中记录了如下重要字段：
 + 若***button_position***为空，意味着页面发生跳转，则向上寻找到***refer_url***等于当前***url***的跳转节点;
 + 若***button_position***非空，意味着页面未发生跳转，则向上寻找到***url***等于当前***url***，且***refer_url***等于当前***refer_url***的节点;
 
-### 基于自动打点方式
+#### 建立轨迹:基于自动打点方式
 自动打点方式的埋码中记录了如下重要字段：
 > 
 > ***unid***：track_time映射成的数字，同一个session下可以理解为唯一
@@ -99,15 +103,19 @@ Tracker码的埋码中记录了如下重要字段：
 
 # 推荐有效路径的提取
 ## 直接推荐路径
+
 ## 引导型推荐路径
+
 ## 交叉销售推荐路径
 
 # 基于用户轨迹的KPI统计
 ## 预处理环节
 ### 关联购买节点
+
 ### 推荐路径补全
+
 ## 统计指标
-### PC-H5端
+### PC、H5端
 | 字段      | 含义  |
 | :-------- | :-------- |
 | algorithm_id | 算法id |
@@ -133,7 +141,25 @@ Tracker码的埋码中记录了如下重要字段：
 | order_amount | 订单金额 = 订单的order\_amount求和 |
 
 ### APP端
-
+| 字段      | 含义  |
+| :-------- | :-------- |
+| algorithm_id | 算法id |
+| algorithm_name | 算法名称 |
+| section_id | 栏位id |
+| section_name | 栏位名称 |
+| page_id | 页面id |
+| page_name | 页面名称 |
+| path_type | 路径类型 |
+| app_version | APP终端版本 |
+| uv | 栏位UV = 去重后点击的gu_id个数 |
+| click_counts | 点击数 = count( position\_type\_id in (1,2) ) |
+| click_user_counts | 点击人数 = position\_type\_id in (1,2)情况下的去重gu\_id的个数 |
+| add_cart_counts | 加车数 = count( position\_type\_id in (3,4,5,6) ) |
+| add_cart_user_counts | 加车人数 = position\_type\_id in (3,4,5,6)情况下的去重gu\_id的个数 |
+| order_sku_counts | 下单的sku数 = 去重的父订单product\_id数 |
+| order_user_counts | 下单人数 = 去重的父订单end\_user\_id数 |
+| order_counts | 订单数 = 去重的父订单数 |
+| order_amount | 订单金额 = 订单的order\_amount求和 |
 
 
 [简明Tracker体系说明文档]: https://github.com/ouyangyewei/document/tree/master/YiHaoDian/simple_tracker_introduction
