@@ -2,13 +2,18 @@
 **作者：欧阳业伟**  
 **修订日期：2015年10月8日**  
 
-------------
-[TOC]
+Table Of Content
+================
 
-------------
+  * [用户轨迹系统介绍](#用户轨迹系统介绍)
+    * [背景](#背景) 
+    * [用途](#用途)
+  * [各平台埋码方式调研](#各平台埋码方式调研)
+  * [用户轨迹图的建立](#用户轨迹图的建立)
 
-# **1. 用户轨迹系统介绍**
-## **1.1. 背景**
+# 用户轨迹系统介绍
+## 背景
+
 + BI提供的KPI数据中并不包含引导性的推荐数据，引导型的推荐数据定义如下：  
     - 猜对了用户想购买的类目，却没有猜中用户想购买的商品；
     - 猜对了用户想购买的品牌，却没有猜中用户想购买的商品；
@@ -85,8 +90,36 @@ Tracker码的埋码中记录了如下重要字段：
 ### **5.1.1. 关联购买节点**
 ### **5.1.2. 推荐路径补全**
 ## **5.2. 统计指标**
+### **5.2.1. PC端、H5端**
+| 字段      | 含义  |
+| :-------- | :-------- |
+| algorithm_id | 算法id |
+| algorithm_name | 算法名称 |
+| section_id | 栏位id |
+| section_name | 栏位名称 |
+| page_id | 页面id |
+| page_name | 页面名称 |
+| rcmd_type | 推荐类型id |
+| rcmd_type_name | 推荐类型名称（-1 无，0 未知物品，1 商品，2 分类，3 品牌，4 搜索，5 促销，6 团购，7 抵用券，8 浏览） |
+| related_type | 关联类型id |
+| related_type_name | 关联类型名称（-1 无，0 未知，1 直接加车，2 同商品，3 同分类，4 同品牌，5 同促销，6 同系列，7 相关分类，8 相关品牌，9 机器搭配，10 人工搭配） |
+| pv | 页面PV |
+| uv | 栏位UV = 去重后点击的gu_id个数 |
+| click_counts | 点击数 = 点击为link\_position的记录数 |
+| click_user_counts | 点击人数 = 点击为link\_position的去重gu\_id的个数 |
+| click_rate | 点击率 = （点击数 + 加车数）/ 页面PV |
+| add_cart_counts | 加车数 = 点击为button\_position的记录数 |
+| add_cart_user_counts | 加车人数 = 点击为button\_position的去重gu\_id的个数 |
+| order_sku_counts | 下单的sku数 = 去重的父订单product\_id数 |
+| order_user_counts | 下单人数 = 去重的父订单end\_user\_id数 |
+| order_counts | 订单数 = 去重的父订单数 |
+| order_amount | 订单金额 = 订单的order\_amount求和 |
 
 
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> are supported
+- [x] list syntax is required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
 
 
 [简明Tracker体系说明文档]: https://github.com/ouyangyewei/document/tree/master/YiHaoDian/simple_tracker_introduction
