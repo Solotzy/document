@@ -19,8 +19,7 @@
         * [基于Tracker码方式](#基于Tracker码方式)
         * [基于自动打点方式](#基于自动打点方式)
   * [推荐有效路径的提取](#推荐有效路径的提取)
-    * [直接推荐路径](#直接推荐路径)
-    * [引导型推荐路径](#引导型推荐路径)
+    * [直接推荐路径与引导型推荐路径](#直接推荐路径与引导型推荐路径)
     * [交叉销售推荐路径](#交叉销售推荐路径)
   * [基于用户轨迹的KPI统计](#基于用户轨迹的KPI统计)
     * [预处理环节](#预处理环节)
@@ -109,11 +108,15 @@ Tracker码的埋码中记录了如下重要字段：
 + 由于同一个***session***中***unid***几乎不同，所以通过***unid***直接判断，向上寻找到***unid***等于当前***refunid***的节点（无论是否发生跳转）
 
 # 推荐有效路径的提取
-## 直接推荐路径
+## 直接推荐路径与引导型推荐路径
+当用户轨迹路径建立完成后，随后便从用户轨迹路径中提取属于精准化推荐的有效路径，提取流程遵循如下：
++ 遍历轨迹树，若发现`algorithm_code`非空，则更新推荐节点索引`rcmd_index`
++ 遍历轨迹树，若发现`is_add_cart`非空，且`rcmd_index`非空，则开始判断路径（意味着存在从推荐节点到加车节点的路径，此时获得的推荐节点索引是距离加车节点最近的）
 
-## 引导型推荐路径
+![推荐有效路径提取规则][]
 
 ## 交叉销售推荐路径
+![交叉销售汇总][]
 
 # 基于用户轨迹的KPI统计
 ## 预处理环节
@@ -176,4 +179,5 @@ Tracker码的埋码中记录了如下重要字段：
 [Tracker记录字段]: http://wiki.yihaodian.cn/mediawiki/index.php/Tracker%E8%AE%B0%E5%BD%95%E5%AD%97%E6%AE%B5%E7%9A%84%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3
 [用户轨迹工程-预处理数据]: https://github.com/ouyangyewei/document/blob/master/YiHaoDian/user_trace_introduction/ref/%5B%E7%94%A8%E6%88%B7%E8%BD%A8%E8%BF%B9%E5%B7%A5%E7%A8%8B%5D%E9%A2%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE.xls?raw=true
 [用户轨迹路径建立]: https://github.com/ouyangyewei/document/blob/master/YiHaoDian/user_trace_introduction/ref/%E7%94%A8%E6%88%B7%E8%BD%A8%E8%BF%B9%E8%B7%AF%E5%BE%84%E5%BB%BA%E7%AB%8B.png
-[推荐有效路径提取规则]: https://github.com/ouyangyewei/document/blob/master/YiHaoDian/user_trace_introduction/ref/%E6%8E%A8%E8%8D%90%E6%9C%89%E6%95%88%E8%B7%AF%E5%BE%84%E6%8F%90%E5%8F%96%E8%A7%84%E5%88%991.png
+[推荐有效路径提取规则]: https://raw.githubusercontent.com/ouyangyewei/document/master/YiHaoDian/user_trace_introduction/ref/%E6%8E%A8%E8%8D%90%E6%9C%89%E6%95%88%E8%B7%AF%E5%BE%84%E6%8F%90%E5%8F%96%E8%A7%84%E5%88%99.png
+[交叉销售汇总]: https://raw.githubusercontent.com/ouyangyewei/document/master/YiHaoDian/user_trace_introduction/ref/%E4%BA%A4%E5%8F%89%E9%94%80%E5%94%AE%E6%B1%87%E6%80%BB.png
