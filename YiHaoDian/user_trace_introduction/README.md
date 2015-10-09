@@ -176,3 +176,4 @@ Tracker码的埋码中记录了如下重要字段：
 [Tracker记录字段]: http://wiki.yihaodian.cn/mediawiki/index.php/Tracker%E8%AE%B0%E5%BD%95%E5%AD%97%E6%AE%B5%E7%9A%84%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3
 [用户轨迹工程-预处理数据]: https://github.com/ouyangyewei/document/blob/master/YiHaoDian/user_trace_introduction/ref/%5B%E7%94%A8%E6%88%B7%E8%BD%A8%E8%BF%B9%E5%B7%A5%E7%A8%8B%5D%E9%A2%84%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE.xls?raw=true
 [用户轨迹路径建立]: https://github.com/ouyangyewei/document/blob/master/YiHaoDian/user_trace_introduction/ref/%E7%94%A8%E6%88%B7%E8%BD%A8%E8%BF%B9%E8%B7%AF%E5%BE%84%E5%BB%BA%E7%AB%8B.png
+[推荐有效路径提取规则]: https://github.com/ouyangyewei/document/blob/master/YiHaoDian/user_trace_introduction/ref/%E6%8E%A8%E8%8D%90%E6%9C%89%E6%95%88%E8%B7%AF%E5%BE%84%E6%8F%90%E5%8F%96%E8%A7%84%E5%88%991.png
