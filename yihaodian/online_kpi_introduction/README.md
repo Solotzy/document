@@ -30,6 +30,22 @@
 ## 2. Storm应用的统计流程
 ![实时指标统计流程图](https://raw.githubusercontent.com/ouyangyewei/document/master/yihaodian/online_kpi_introduction/ref/%E5%AE%9E%E6%97%B6%E6%8C%87%E6%A0%87%E7%BB%9F%E8%AE%A1%E6%B5%81%E7%A8%8B.png)
 
+storm应用工程代码介绍：
+
+* `com.yhd.recsys.kpi.storm.OnlineKpiTopology`：storm应用的入口
+* `com.yhd.recsys.kpi.storm.bolt.TrackerFilterBolt`：kafka的tracker过滤器，抽取、清洗需要的字段，缩减kafka tracker的数据量；
+* `com.yhd.recsys.kpi.storm.bolt.TrackerAnalyzerBolt`：对每条Tracker，都按解析器顺序执行解析：
+    * `com.yhd.recsys.kpi.analyzer.PlatformAnalyzer`：平台解析器
+    * `com.yhd.recsys.kpi.analyzer.AlgorithmAnalyzer`：算法解析器
+    * `com.yhd.recsys.kpi.analyzer.AddCartAnalyzer`：加车解析器
+* `com.yhd.recsys.kpi.storm.bolt.summary.ClickBolt`：实时统计：统计点击数
+* `com.yhd.recsys.kpi.storm.bolt.summary.AddCartBolt`：实时统计：统计加车数
+* `com.yhd.recsys.kpi.storm.spout.OrderSpout`：订单spout，从订单jumper中实时获取订单信息
+* `com.yhd.recsys.kpi.storm.bolt.summary.OrderBolt`：实时统计：统计订单数
+* `com.yhd.recsys.kpi.storm.bolt.KpiSummaryBolt`：KPI统计流程，按页面、栏位、算法、指标类型分组，进行指标汇总，每隔五分钟输出一次汇总数据
+
+![实时指标统计代码结构图](https://raw.githubusercontent.com/ouyangyewei/document/master/yihaodian/online_kpi_introduction/ref/%E5%AE%9E%E6%97%B6%E6%8C%87%E6%A0%87%E7%BB%9F%E8%AE%A1%E6%B5%81%E7%A8%8B%20-%20%E4%BB%A3%E7%A0%81%E7%BB%93%E6%9E%84.png)
+
 ## 3. Storm应用的统计逻辑
 ### 3.1. 统计来自kafka tracker的点击数和加车数
 #### 3.1.1. 算法解析器
